@@ -4,12 +4,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <title>Civilization 5 Ultimate Bravery</title>
   <link rel="stylesheet" href="../foundation/css/normalize.css" />
   <link rel="stylesheet" href="../foundation/css/foundation.min.css" />
   <script src="../foundation/js/vendor/modernizr.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
+
+<body>
+  <div class="row">
+    <div class="small-3 small-centered columns" id="top-image">
+      <img src="http://fc09.deviantart.net/fs70/f/2012/197/0/0/civilization_v_by_regisztralt-d5789ws.png"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-10 small-centered columns" id="title-box">
+      <p>Civilisation 5 Ultimate Bravery</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-10 small-centered columns" id="main-box">
+      <div class="row">
+        <div class="small-11 small-centered columns">
+          <div class="row inside-box" id="civ-box">
+            <div class="small-4 columns">
+              {{ civ.civ_image }}
+              {{ civ.leader_image }}
+            </div>
+            <div class="small-8 columns">
+              <div class="row inside-title">
+                <div class="small-12 columns">
+                  <p>{{ civ.name }} - {{ civ.leader }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <p>{{ civ.ability_name }}: {{ civ.ability_desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row inside-box" id="victory-box">
+            <div class="small-4 columns">
+              {{ civ.civ_image }}
+            </div>
+            <div class="small-8 columns">
+              <div class="row inside-title">
+                <div class="small-12 columns">
+                  <p>{{ victory.name }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <p>{{ victory.desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-10 small-centered columns" id="bottom-box">
+    </div>
+  </div>
+  <script src="../foundation/js/vendor/jquery.js"></script>
+  <script src="../foundation/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+
+
+
 <body>
   <div class="row">
     <div id="title" class="small-9 small-centered columns">
