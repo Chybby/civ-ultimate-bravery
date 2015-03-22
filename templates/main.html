@@ -21,7 +21,7 @@
   </div>
   <div class="row">
     <div class="small-10 small-centered columns" id="title-box">
-      <p>Civilization 5 Ultimate Bravery</p>
+      <div>Civilization 5 Ultimate Bravery</div>
     </div>
   </div>
   <div class="row">
@@ -36,12 +36,12 @@
             <div class="small-8 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <p>{{ civ.name }} - {{ civ.leader }}</p>
+                  <div>{{ civ.name }} - {{ civ.leader }}</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p>{{ civ.ability_name }}: {{ civ.ability_desc }}</p>
+                  <div>{{ civ.ability_name }}: {{ civ.ability_desc }}</div>
                 </div>
               </div>
             </div>
@@ -53,12 +53,12 @@
             <div class="small-8 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <p>{{ victory.name }}</p>
+                  <div>{{ victory.name }}</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <p>{{ victory.desc }}</p>
+                  <div>{{ victory.desc }}</div>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <p>Religion</p>
+                  <div>Religion</div>
                 </div>
               </div>
               <div class="row belief">
@@ -102,36 +102,30 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="small-6 columns">
-              <div class="row inside-box" id="policy-box">
+          <div class="row inside-box" id="policy-box">
+            <div class="small-12 columns">
+              <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div class="row inside-title">
-                    <div class="small-12 columns">
-                      <p>{{ policy_tree.name }}</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="small-12 columns">
-                      <p>{{ policy_tree.desc }}</p>
-                    </div>
-                  </div>
+                  <div>First Completed Policy: {{ policy_tree.name }}</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <div>{{ policy_tree.desc }}</div>
                 </div>
               </div>
             </div>
-            <div class="small-6 columns">
-              <div class="row inside-box" id="ideology-box">
+          </div>
+          <div class="row inside-box" id="ideology-box">
+            <div class="small-12 columns">
+              <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div class="row inside-title">
-                    <div class="small-12 columns">
-                      <p>{{ ideology.name }}</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="small-12 columns">
-                      <p>{{ ideology.desc }}</p>
-                    </div>
-                  </div>
+                  <div>Ideology: {{ ideology.name }}</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <div>{{ ideology.desc }}</div>
                 </div>
               </div>
             </div>

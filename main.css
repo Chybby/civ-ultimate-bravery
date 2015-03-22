@@ -15,9 +15,11 @@ body {
   padding-top: 3px;
 }
 
-#title-box > p {
+#title-box > div {
   margin-bottom: 0;
   font-size: 20px;
+  font-weight: bold;
+
 }
 
 #main-box {
@@ -43,15 +45,21 @@ body {
 
 .inside-title > .columns {
   background-color: #3a716e;
-  height: 25px;
   border-radius: 6px;
   border: solid #b5bdb2 1px;
   color: #ecf5d6;
   text-align: center;
 }
+.inside-title > .columns > div {
+  font-weight: bold;
+}
 
 .belief > .columns {
   margin-bottom: 5px;
+}
+
+.belief > .columns > div:first-child {
+  font-weight: bold;
 }
 
 .belief:after{
@@ -66,14 +74,6 @@ body {
 .belief:last-child:after{
   height: 0px;
   margin: 0px;
-}
-
-#policy-box {
-  margin-right: 2px;
-}
-
-#ideology-box {
-  margin-left: 2px;
 }
 
 #bottom-box {
