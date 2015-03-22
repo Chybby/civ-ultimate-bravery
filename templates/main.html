@@ -21,7 +21,7 @@
   </div>
   <div class="row">
     <div class="small-10 small-centered columns" id="title-box">
-      <p>Civilisation 5 Ultimate Bravery</p>
+      <p>Civilization 5 Ultimate Bravery</p>
     </div>
   </div>
   <div class="row">
@@ -63,6 +63,79 @@
               </div>
             </div>
           </div>
+          <div class="row inside-box" id="religion-box">
+            <div class="small-12 columns">
+              <div class="row inside-title">
+                <div class="small-12 columns">
+                  <p>Religion</p>
+                </div>
+              </div>
+              <div class="row belief">
+                <div class="small-12 columns">
+                  <div>Pantheon Belief: {{ pantheon.name }}</div>
+                  <div>{{ pantheon.desc }}</div>
+                </div>
+              </div>
+              <div class="row belief">
+                <div class="small-12 columns">
+                  <div>Founder Belief: {{ founder.name }}</div>
+                  <div>{{ founder.desc }}</div>
+                </div>
+              </div>
+              <div class="row belief">
+                <div class="small-12 columns">
+                  <div>First Follower Belief: {{ follower1.name }}</div>
+                  <div>{{ follower1.desc }}</div>
+                </div>
+              </div>
+              <div class="row belief">
+                <div class="small-12 columns">
+                  <div>Second Follower Belief: {{ follower2.name }}</div>
+                  <div>{{ follower2.desc }}</div>
+                </div>
+              </div>
+              <div class="row belief">
+                <div class="small-12 columns">
+                  <div>Enhancer Belief: {{ enhancer.name }}</div>
+                  <div>{{ enhancer.desc }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-6 columns">
+              <div class="row inside-box" id="policy-box">
+                <div class="small-12 columns">
+                  <div class="row inside-title">
+                    <div class="small-12 columns">
+                      <p>{{ policy.name }}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <p>{{ policy.desc }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="small-6 columns">
+              <div class="row inside-box" id="ideology-box">
+                <div class="small-12 columns">
+                  <div class="row inside-title">
+                    <div class="small-12 columns">
+                      <p>{{ ideology.name }}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <p>{{ ideology.desc }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,51 +144,7 @@
     <div class="small-10 small-centered columns" id="bottom-box">
     </div>
   </div>
-  <script src="../foundation/js/vendor/jquery.js"></script>
-  <script src="../foundation/js/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-</body>
 
-
-
-<body>
-  <div class="row">
-    <div id="title" class="small-9 small-centered columns">
-      <h1>Civilization 5 Ultimate Bravery</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-9 small-centered columns">
-      <h2>Civilization</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td>{{ civ.civ_image }}</td>
-              <td>{{ civ.leader_image }}</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>{{ civ.leader }}, leader of {{ civ.name }} - {{ civ.ability_name }}: {{ civ.ability_desc }}</p>
-      <h2>Victory</h2>
-      <p>{{ victory.name }} - {{ victory.desc }}</p>
-      <h2>Pantheon Belief</h2>
-      <p>{{ pantheon.name }} - {{ pantheon.desc }}</p>
-      <h2>Founder Belief</h2>
-      <p>{{ founder.name }} - {{ founder.desc }}</p>
-      <h2>First Follower Belief</h2>
-      <p>{{ follower1.name }} - {{ follower1.desc }}</p>
-      <h2>Second Follower Belief</h2>
-      <p>{{ follower2.name }} - {{ follower2.desc }}</p>
-      <h2>Enhancer Belief</h2>
-      <p>{{ enhancer.name }} - {{ enhancer.desc }}</p>
-      <h2>First Completed Policy Tree</h2>
-      <p>{{ policy_tree.name }} - {{ policy_tree.desc }}</p>
-      <h2>Ideology</h2>
-      <p>{{ ideology.name }} - {{ ideology.desc }}</p>
-    </div>
-  </div>
   <script src="../foundation/js/vendor/jquery.js"></script>
   <script src="../foundation/js/foundation.min.js"></script>
   <script>
