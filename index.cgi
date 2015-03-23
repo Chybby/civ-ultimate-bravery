@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
 
 # all the data about civilization
 from data import *
@@ -21,7 +20,7 @@ context = {}
 query_args = cgi.FieldStorage()
 section = query_args.getfirst('section', '')
 
-content = u''
+content = ''
 
 if section == 'religion':
   # return only the religion section
