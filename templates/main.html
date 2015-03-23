@@ -75,8 +75,11 @@
           <div class="row inside-box" id="religion-box">
             <div class="small-12 columns">
               <div class="row inside-title">
-                <div class="small-12 columns">
+                <div class="small-11 columns">
                   <div>{{ religion.name }}</div>
+                </div>
+                <div class="small-1 columns" id="religion-refresh-button" onclick="refreshReligion()">
+                  <div>↻</div>
                 </div>
               </div>
               <div class="row belief">
@@ -158,6 +161,18 @@
   <script src="../foundation/js/foundation.min.js"></script>
   <script>
     $(document).foundation();
+    function refreshReligion() {
+      xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        alert('state ' + xmlhttp.readyState + ' status ' + xmlhttp.status);
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 0) {
+          alert(xmlhttp.responseText);
+          document.getElementById("religion-box").outerHTML=xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET", "index.cgi?section=religion", true);
+      xmlhttp.send();
+    }
   </script>
 </body>
 </html>

@@ -71,9 +71,23 @@ body {
   color: #e1e2b6;
   text-align: center;
 }
+
 .inside-title > .columns > div {
   font-weight: bold;
   text-shadow: 0 0 5px #a1b8bf;
+}
+
+#religion-refresh-button {
+  width: 26px;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#religion-refresh-button:active {
+  background: linear-gradient(to bottom, rgba(54,104,113,1) 0%, rgba(33,47,94,1) 50%, rgba(54,104,113,1) 100%);
 }
 
 .belief > .columns {
