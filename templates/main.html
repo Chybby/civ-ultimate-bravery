@@ -28,6 +28,9 @@
     <div class="medium-10 small-12 small-centered columns" id="main-box">
       <div class="row">
         <div class="small-11 small-centered columns">
+          <div class="row inside-box-title">
+            <div>Civilization:</div>
+          </div>
           <div class="row inside-box" id="civ-box">
             <div class="small-4 columns">
               {{ civ.civ_image }}
@@ -46,6 +49,9 @@
               </div>
             </div>
           </div>
+          <div class="row inside-box-title">
+            <div>Victory Type:</div>
+          </div>
           <div class="row inside-box" id="victory-box">
             <div class="small-4 columns">
               {{ civ.civ_image }}
@@ -63,11 +69,14 @@
               </div>
             </div>
           </div>
+          <div class="row inside-box-title">
+            <div>Religion:</div>
+          </div>
           <div class="row inside-box" id="religion-box">
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>Religion</div>
+                  <div>{{ religion.name }}</div>
                 </div>
               </div>
               <div class="row belief">
@@ -102,11 +111,14 @@
               </div>
             </div>
           </div>
+          <div class="row inside-box-title">
+            <div>First Completed Policy:</div>
+          </div>
           <div class="row inside-box" id="policy-box">
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>First Completed Policy: {{ policy_tree.name }}</div>
+                  <div>{{ policy_tree.name }}</div>
                 </div>
               </div>
               <div class="row">
@@ -116,11 +128,14 @@
               </div>
             </div>
           </div>
+          <div class="row inside-box-title">
+            <div>Ideology:</div>
+          </div>
           <div class="row inside-box" id="ideology-box">
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>Ideology: {{ ideology.name }}</div>
+                  <div>{{ ideology.name }}</div>
                 </div>
               </div>
               <div class="row">

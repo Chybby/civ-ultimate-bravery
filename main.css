@@ -1,10 +1,10 @@
 body {
-  color: #d8e1a0;
+  color: #f0f4d1;
   font-family: 'Muli', sans-serif;
 }
 
 #title-box {
-  background-color: #23425e;
+  background: linear-gradient(to bottom, rgba(19,42,73,1) 0%, rgba(55,106,107,1) 40%, rgba(55,106,107,1) 60%, rgba(35,61,98,1) 100%);
   border-radius: 40px 40px 0 0;
   height: 40px;
   border-bottom: solid #dfbfb4 3px;
@@ -16,10 +16,11 @@ body {
 }
 
 #title-box > div {
+  color: #1b374d;
   margin-bottom: 0;
   font-size: 20px;
   font-weight: bold;
-
+  text-shadow: 0 0 6px #a1b8bf;
 }
 
 #main-box {
@@ -27,6 +28,12 @@ body {
   padding-top: 20px;
   border-left: solid #b79188 6px;
   border-right: solid #b79188 6px;
+}
+
+.inside-box-title {
+  padding-left: 10px;
+  font-size: 18px;
+  margin-bottom: -5px !important;
 }
 
 .inside-box {
@@ -37,49 +44,55 @@ body {
   border-bottom: solid #4d4f4e 2px;
   border-radius: 10px;
   margin-bottom: 20px !important;
+  padding: 10px 0 10px 0;
 }
 
 .inside-title {
-  padding: 10px 10px 10px 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .inside-title > .columns {
-  background-color: #3a716e;
+  background: linear-gradient(to bottom, rgba(33,47,94,1) 0%, rgba(54,104,113,1) 50%, rgba(32,54,93,1) 100%);
   border-radius: 6px;
   border: solid #b5bdb2 1px;
-  color: #ecf5d6;
+  color: #e1e2b6;
   text-align: center;
 }
 .inside-title > .columns > div {
   font-weight: bold;
+  text-shadow: 0 0 5px #a1b8bf;
 }
 
 .belief > .columns {
   margin-bottom: 5px;
 }
 
+.belief:last-child > .columns {
+  margin-bottom: 0;
+}
+
 .belief > .columns > div:first-child {
   font-weight: bold;
 }
 
-.belief:after{
+.belief:after {
   content: "";
   height: 1px;
-  background: linear-gradient(to right,  rgba(0,0,0,0) 0%, rgba(249,255,190,1) 20%, rgba(249,255,190,1) 80%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(249,255,190,1) 20%, rgba(249,255,190,1) 80%, rgba(0,0,0,0) 100%);
   display: block;
   margin: 0 0 5px 0;
   width: 100%;
 }
 
-.belief:last-child:after{
+.belief:last-child:after {
   height: 0px;
   margin: 0px;
 }
 
 #bottom-box {
-  background-color: #23425e;
+  background: linear-gradient(to bottom, rgba(43,88,111,1) 0%, rgba(16,37,68,1) 100%);
   border-radius: 0 0 40px 40px;
-  height: 40px;
+  height: 25px;
   border-bottom: solid #b69177 3px;
   border-left: solid #b69177 6px;
   border-right: solid #b69177 6px;

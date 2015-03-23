@@ -50,11 +50,26 @@ civs = [{'unique1': 'B17', 'unique2': 'Minuteman', 'name': 'America', 'leader_im
         {'unique1': 'Impi', 'unique2': 'Ikanda', 'name': 'Zulus', 'leader_image': '<img src="http://www.dndjunkie.com/civilopedia/images/large/LEADER_SHAKA.png" width="150" height="150" />', 'ability_name': 'Iklwa', 'civ_image': '<img src="http://www.dndjunkie.com/civilopedia/images/large/CIVILIZATION_ZULU.png" width="150" height="150" />', 'ability_desc': 'Melee units cost 50% less maintenance; all military units require 25% less XP to earn a promotion. ', 'leader': 'Shaka'}]
 
 # info victory types
-victories = [{'name':'Science Victory', 'desc':'Build and launch a spaceship headed for Alpha Centauri'},
-             {'name':'Time Victory', 'desc':'Have the most points when the game finishes in the year 2050 AD'},
-             {'name':'Domination Victory', 'desc':'Control every civilization\'s capital as well as your own'},
-             {'name':'Cultural Victory', 'desc':'Amass enough tourism to become influential on every other civilization in the game'},
-             {'name':'Diplomatic Victory', 'desc':'Win a majority vote for World Leader'}]
+victories = [{'name': 'Science Victory', 'desc': 'Build and launch a spaceship headed for Alpha Centauri'},
+             {'name': 'Time Victory', 'desc': 'Have the most points when the game finishes in the year 2050 AD'},
+             {'name': 'Domination Victory', 'desc': 'Control every civilization\'s capital as well as your own'},
+             {'name': 'Cultural Victory', 'desc': 'Amass enough tourism to become influential on every other civilization in the game'},
+             {'name': 'Diplomatic Victory', 'desc': 'Win a majority vote for World Leader'}]
+
+# religion names
+religions = [{'name': 'Buddhism'},
+             {'name': 'Catholicism'},
+             {'name': 'Confucianism'},
+             {'name': 'Eastern Orthodoxy'},
+             {'name': 'Hinduism'},
+             {'name': 'Islam'},
+             {'name': 'Judaism'},
+             {'name': 'Protestantism'},
+             {'name': 'Shinto'},
+             {'name': 'Sikhism'},
+             {'name': 'Taoism'},
+             {'name': 'Tengriism'},
+             {'name': 'Zoroastrianism'}]
 
 # info pantheon beliefs
 pantheons = [{'name': 'Ancestor Worship', 'desc': '+1 Culture from Shrines'},

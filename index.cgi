@@ -20,6 +20,7 @@ context = {}
 # randomise all the things
 context['civ'] = random.choice(civs)
 context['victory'] = random.choice(victories)
+context['religion'] = random.choice(religions)
 context['pantheon'] = random.choice(pantheons)
 context['founder'] = random.choice(founder_beliefs)
 # we don't want two of the same follower beliefs
