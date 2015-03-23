@@ -21,7 +21,7 @@ context = {}
 query_args = cgi.FieldStorage()
 section = query_args.getfirst('section', '')
 
-content = ''
+content = u''
 
 if section == 'religion':
   # return only the religion section
