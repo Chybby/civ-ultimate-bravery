@@ -3,6 +3,18 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
+#top-image {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  z-index: 1;
+  text-align: center;
+}
+
+#top-image > img {
+  width: 200px;
+  height: 200px;
+}
+
 #title-box {
   background: linear-gradient(to bottom, rgba(19,42,73,1) 0%, rgba(55,106,107,1) 40%, rgba(55,106,107,1) 60%, rgba(35,61,98,1) 100%);
   border-radius: 40px 40px 0 0;
@@ -20,7 +32,7 @@ body {
   margin-bottom: 0;
   font-size: 20px;
   font-weight: bold;
-  text-shadow: 0 0 6px #a1b8bf;
+  text-shadow: 0 0 6px #dbe2e3;
 }
 
 #main-box {
