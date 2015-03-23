@@ -164,9 +164,7 @@
     function refreshReligion() {
       xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
-        alert('state ' + xmlhttp.readyState + ' status ' + xmlhttp.status);
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          alert(xmlhttp.responseText);
           document.getElementById("religion-box").outerHTML=xmlhttp.responseText;
         }
       }
