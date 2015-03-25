@@ -2,8 +2,6 @@
 # partly scraped from http://www.civfanatics.com/ and http://civilization.wikia.com/wiki/Civilization_V
 # otherwise written by hand
 
-# TODO: serve my own images
-
 # info on civilization names, abilities, leaders, unique units/improvements/buildings
 civs = [{'unique1': 'B17', 'unique2': 'Minuteman', 'name': 'America', 'leader_image': '<img src="http://forums.civfanatics.com/images/war_academy/civ5/leaders/big/washington.png" width="150" height="150" />', 'ability_name': 'Manifest Destiny', 'civ_image': '<img src="http://forums.civfanatics.com/images/war_academy/civ5/civs/big/america.png" width="150" height="150" />', 'ability_desc': 'All land military units have +1 sight. 50% discount when purchasing tiles.', 'leader': 'Washington'},
         {'unique1': 'Camel Archer', 'unique2': 'Bazaar', 'name': 'Arabia', 'leader_image': '<img src="http://forums.civfanatics.com/images/war_academy/civ5/leaders/big/harunalrashid.png" width="150" height="150" />', 'ability_name': 'Ships of the Desert', 'civ_image': '<img src="http://forums.civfanatics.com/images/war_academy/civ5/civs/big/arabia.png" width="150" height="150" />', 'ability_desc': "Caravans gain 50% extended range. Your trade routes spread the home city's religion twice as effectively. Oil resources are doubled.", 'leader': 'Harun al-Rashid'},
@@ -100,7 +98,7 @@ pantheons = [{'name': 'Ancestor Worship', 'desc': '+1 Culture from Shrines'},
              {'name': 'Tear of the Gods', 'desc': '+2 Faith for each Gems or Pearls resource'}]
 
 # info on follower beliefs
-follower_beliefs = [{'name': 'Ceremonial Burial', 'desc': '+1 Happiness for every City following this religion<br /> +1 Happiness for every 2 Cities following this religion'},
+follower_beliefs = [{'name': 'Ceremonial Burial', 'desc': '+1 Happiness for every 2 Cities following this religion'},
                     {'name': 'Church Property', 'desc': '+2 Gold for each City following this religion'},
                     {'name': 'Initiation Rites', 'desc': '+100 Gold when each City first converts to this religion'},
                     {'name': 'Interfaith Dialogue', 'desc': 'Gain Science when a Missionary spreads this religion to cities of other religions'},
@@ -123,7 +121,7 @@ founder_beliefs = [{'name': 'Asceticism', 'desc': 'Shrines provide +1 Happiness 
                    {'name': 'Mosques', 'desc': 'Use Faith to purchase Mosques'},
                    {'name': 'Pagodas', 'desc': 'Use Faith to purchase Pagodas'},
                    {'name': 'Peace Gardens', 'desc': 'Gardens provide +2 Happiness in city'},
-                   {'name': 'Religious Art', 'desc': 'Hermitage provides +8 Culture in city<br /> Hermitage provides +5 Culture and +5 Tourism'},
+                   {'name': 'Religious Art', 'desc': 'Hermitage provides +5 Culture and +5 Tourism'},
                    {'name': 'Religious Center', 'desc': 'Temples provide +2 Happiness in cities with 5 followers'},
                    {'name': 'Religious Community', 'desc': '+1% Production for each follower (Max +15%)'},
                    {'name': 'Swords into Plowshares', 'desc': '15% faster Growth rate for city if not at war'}]
@@ -135,7 +133,7 @@ enhancer_beliefs = [{'name': 'Defender of the Faith', 'desc': '+20% Combat Stren
                     {'name': 'Just War', 'desc': '+20% Combat Strength near enemy cities that follow this religion'},
                     {'name': 'Messiah', 'desc': 'Prophets 25% stronger and earned with 25% less Faith'},
                     {'name': 'Missionary Zeal', 'desc': 'Missionary conversion strength +25%'},
-                    {'name': 'Religious Texts', 'desc': 'Religion spreads 34% faster (68% with Printing Press)<br /> Religion spreads 25% faster (50% with Printing Press)'},
+                    {'name': 'Religious Texts', 'desc': 'Religion spreads 25% faster (50% with Printing Press)'},
                     {'name': 'Religious Unity', 'desc': 'Religion spreads to friendly City-States at double rate'},
                     {'name': 'Reliquary', 'desc': 'Gain 50 Faith each time a Great Person is expended'}]
 

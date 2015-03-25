@@ -4,16 +4,31 @@ body {
   background-color: #0c0c0c;
 }
 
-#top-image {
-  margin-top: 10px;
-  margin-bottom: -5px;
-  z-index: 1;
-  text-align: center;
+#civ-logo {
+  margin-top: 20px;
+  z-index: 10;
 }
 
-#top-image > img {
+#civ-logo img {
   width: 200px;
   height: 200px;
+  display: block;
+  margin: auto;
+  margin-bottom: -45px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#civ-logo-base {
+  z-index: -1;
+}
+
+#civ-logo-base img{
+  width: 200px;
+  height: 50px;
+  margin-bottom: -10px !important;
+  display: block;
+  margin: auto;
 }
 
 #title-box {
@@ -26,6 +41,7 @@ body {
   border-top: solid #b69177 2px;
   text-align: center;
   padding-top: 3px;
+  z-index: 1;
 }
 
 #title-box > div {

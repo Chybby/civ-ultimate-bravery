@@ -1,3 +1,5 @@
+Content-Type: text/html
+
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" >
@@ -37,18 +39,18 @@
           </div>
           <div class="row inside-box" id="civ-box">
             <div class="small-4 columns">
-              {{ civ.civ_image }}
-              {{ civ.leader_image }}
+              <img src="http://www.dndjunkie.com/civilopedia/images/large/CIVILIZATION_SHOSHONE.png" width="150" height="150" />
+              <img src="http://www.dndjunkie.com/civilopedia/images/large/LEADER_POCATELLO.png" width="150" height="150" />
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>{{ civ.name }} - {{ civ.leader }}</div>
+                  <div>Shoshone - Pocatello</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>{{ civ.ability_name }}: {{ civ.ability_desc }}</div>
+                  <div>Great Expanse: Founded cities start with additional territory. Units receive a combat bonus when fighting in their own territory.</div>
                 </div>
               </div>
             </div>
@@ -58,17 +60,17 @@
           </div>
           <div class="row inside-box" id="victory-box">
             <div class="small-4 columns">
-              {{ civ.civ_image }}
+              <img src="http://www.dndjunkie.com/civilopedia/images/large/CIVILIZATION_SHOSHONE.png" width="150" height="150" />
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>{{ victory.name }}</div>
+                  <div>Domination Victory</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>{{ victory.vic_desc }}</div>
+                  <div>Control every civilization's capital as well as your own</div>
                 </div>
               </div>
             </div>
@@ -76,7 +78,48 @@
           <div class="row inside-box-title">
             <div>Religion:</div>
           </div>
-          {% include 'religion.html' %}
+          <div class="row inside-box" id="religion-box">
+  <div class="small-12 columns">
+    <div class="row inside-title">
+      <div class="small-10 medium-11 columns">
+        <div>Islam</div>
+      </div>
+      <div class="small-1 columns" id="religion-refresh-button" title="Refresh religious beliefs" onclick="refreshReligion()">
+        <div>&#10227;</div>
+      </div>
+    </div>
+    <div class="row belief">
+      <div class="small-12 columns">
+        <div>Pantheon Belief: Messenger of the Gods</div>
+        <div>+2 Science in cities with a City Connection</div>
+      </div>
+    </div>
+    <div class="row belief">
+      <div class="small-12 columns">
+        <div>Founder Belief: Liturgical Drama</div>
+        <div>Amphitheaters provide +1 Faith in cities with 3 followers</div>
+      </div>
+    </div>
+    <div class="row belief">
+      <div class="small-12 columns">
+        <div>First Follower Belief: Ceremonial Burial</div>
+        <div>+1 Happiness for every 2 Cities following this religion</div>
+      </div>
+    </div>
+    <div class="row belief">
+      <div class="small-12 columns">
+        <div>Second Follower Belief: Initiation Rites</div>
+        <div>+100 Gold when each City first converts to this religion</div>
+      </div>
+    </div>
+    <div class="row belief">
+      <div class="small-12 columns">
+        <div>Enhancer Belief: Reliquary</div>
+        <div>Gain 50 Faith each time a Great Person is expended</div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="row inside-box-title">
             <div>First Completed Policy:</div>
           </div>
@@ -84,12 +127,12 @@
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>{{ policy_tree.name }}</div>
+                  <div>Honor</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>{{ policy_tree.pol_desc }}</div>
+                  <div>Improves the effectiveness of one's army in a variety of ways. Adopting Honor gives a +33% combat bonus against Barbarians, and notifications will be provided when new Barbarian Encampments spawn in revealed territory. Gain Culture for the empire from each barbarian unit killed. Unlocks building the Statue of Zeus wonder. Adopting all policies in the Honor tree will grant Gold for each enemy unit killed. It also allows the purchase of Great Generals with Faith starting from the Industrial Era.</div>
                 </div>
               </div>
             </div>
@@ -101,12 +144,12 @@
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>{{ ideology.name }}</div>
+                  <div>Order</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>{{ ideology.ide_desc }}</div>
+                  <div>Best for large, expansionist (but not necessarily aggressive) empires. Its tenets are primarily on a per-city basis and, as such, this Ideology encourages you to expand quickly even in the late game. Go grab all that unclaimed land and make a civilization that will stand the test of time!</div>
                 </div>
               </div>
             </div>
