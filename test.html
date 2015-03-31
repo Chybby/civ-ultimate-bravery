@@ -8,21 +8,21 @@ Content-Type: text/html
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <title>Civilization 5 Ultimate Bravery</title>
-  <link rel="stylesheet" href="../foundation/css/normalize.css" />
-  <link rel="stylesheet" href="../foundation/css/foundation.min.css" />
-  <script src="../foundation/js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="foundation/css/normalize.css" />
+  <link rel="stylesheet" href="foundation/css/foundation.min.css" />
+  <script src="foundation/js/vendor/modernizr.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
   <div class="row">
     <div class="small-12 small-centered columns" id="civ-logo">
-      <img id="civ-logo" src="Civilization_V_logo.png" onclick="location.reload()"/>
+      <img id="civ-logo" src="images/Civilization_V_logo.png" onclick="location.reload()"/>
     </div>
   </div>
   <div class="row">
     <div class="small-12 small-centered columns" id="civ-logo-base">
-      <img id="civ-logo-base" src="Civilization_V_logo_base.png"/>
+      <img id="civ-logo-base" src="images/Civilization_V_logo_base.png"/>
     </div>
   </div>
   <div class="row">
@@ -39,18 +39,18 @@ Content-Type: text/html
           </div>
           <div class="row inside-box" id="civ-box">
             <div class="small-4 columns">
-              <img src="http://www.dndjunkie.com/civilopedia/images/large/CIVILIZATION_SHOSHONE.png" width="150" height="150" />
-              <img src="http://www.dndjunkie.com/civilopedia/images/large/LEADER_POCATELLO.png" width="150" height="150" />
+              <img src="images/maya_civ.png"/>
+              <img src="images/maya_leader.png"/>
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>Shoshone - Pocatello</div>
+                  <div>Maya - Pacal</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>Great Expanse: Founded cities start with additional territory. Units receive a combat bonus when fighting in their own territory.</div>
+                  <div>The Long Count: After researching Theology, receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years). Each bonus person can only be chosen once.</div>
                 </div>
               </div>
             </div>
@@ -60,17 +60,17 @@ Content-Type: text/html
           </div>
           <div class="row inside-box" id="victory-box">
             <div class="small-4 columns">
-              <img src="http://www.dndjunkie.com/civilopedia/images/large/CIVILIZATION_SHOSHONE.png" width="150" height="150" />
+              <img src="images/maya_civ.png"/>
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>Domination Victory</div>
+                  <div>Diplomatic Victory</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>Control every civilization's capital as well as your own</div>
+                  <div>Win a majority vote for World Leader</div>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ Content-Type: text/html
   <div class="small-12 columns">
     <div class="row inside-title">
       <div class="small-10 medium-11 columns">
-        <div>Islam</div>
+        <div>Tengriism</div>
       </div>
       <div class="small-1 columns" id="religion-refresh-button" title="Refresh religious beliefs" onclick="refreshReligion()">
         <div>&#10227;</div>
@@ -90,20 +90,20 @@ Content-Type: text/html
     </div>
     <div class="row belief">
       <div class="small-12 columns">
-        <div>Pantheon Belief: Messenger of the Gods</div>
-        <div>+2 Science in cities with a City Connection</div>
+        <div>Pantheon Belief: Sun God</div>
+        <div>+1 Food for each Bananas, Citrus, and Wheat resource</div>
       </div>
     </div>
     <div class="row belief">
       <div class="small-12 columns">
-        <div>Founder Belief: Liturgical Drama</div>
-        <div>Amphitheaters provide +1 Faith in cities with 3 followers</div>
+        <div>Founder Belief: Holy Warriors</div>
+        <div>Use Faith to purchase pre-Industrial land units</div>
       </div>
     </div>
     <div class="row belief">
       <div class="small-12 columns">
-        <div>First Follower Belief: Ceremonial Burial</div>
-        <div>+1 Happiness for every 2 Cities following this religion</div>
+        <div>First Follower Belief: World Church</div>
+        <div>+1 Culture for every 5 followers of this religion in other civilizations</div>
       </div>
     </div>
     <div class="row belief">
@@ -114,8 +114,8 @@ Content-Type: text/html
     </div>
     <div class="row belief">
       <div class="small-12 columns">
-        <div>Enhancer Belief: Reliquary</div>
-        <div>Gain 50 Faith each time a Great Person is expended</div>
+        <div>Enhancer Belief: Religious Unity</div>
+        <div>Religion spreads to friendly City-States at double rate</div>
       </div>
     </div>
   </div>
@@ -144,12 +144,12 @@ Content-Type: text/html
             <div class="small-12 columns">
               <div class="row inside-title">
                 <div class="small-12 columns">
-                  <div>Order</div>
+                  <div>Autocracy</div>
                 </div>
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div>Best for large, expansionist (but not necessarily aggressive) empires. Its tenets are primarily on a per-city basis and, as such, this Ideology encourages you to expand quickly even in the late game. Go grab all that unclaimed land and make a civilization that will stand the test of time!</div>
+                  <div>Undeniably the best Ideology for aggressive, militaristic empires which seek a Domination Victory first. Its tenets allow you to maintain a large army, produce military units faster, conquer and pacify cities more easily, and even improve the fighting capabilities of your army. Its other tenets also appear aggressive in nature, so go forth and leave none left standing!</div>
                 </div>
               </div>
             </div>
@@ -163,8 +163,8 @@ Content-Type: text/html
     </div>
   </div>
 
-  <script src="../foundation/js/vendor/jquery.js"></script>
-  <script src="../foundation/js/foundation.min.js"></script>
+  <script src="foundation/js/vendor/jquery.js"></script>
+  <script src="foundation/js/foundation.min.js"></script>
   <script>
     $(document).foundation();
     function refreshReligion() {

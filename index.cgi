@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-#TODO: serve my own images
-#TODO: use a database
+#TODO: fix up my images
 #TODO: get a domain
 #TODO: make victory type images
 #TODO: religion images
@@ -19,7 +18,7 @@ cgitb.enable()
 # connect to the db
 con = sqlite3.connect("civ.db")
 
-# dict_factory for results from the db
+# factory for results from the db
 def dict_factory(cursor, row):
   d = {}
   for idx, col in enumerate(cursor.description):
@@ -38,26 +37,22 @@ section = query_args.getfirst('section', '')
 
 content = ''
 
-num_civs = 43
-num_victories = 5
-num_religions = 13
-num_pantheons = 26
-num_founders = 16
-num_followers = 9
-num_enhancers = 9
-num_policies = 3
-num_ideologies = 3
+# returns a random from from the given table
+def get_random_row(table):
+  l = con.execute('SELECT COUNT(*) as n FROM %s' % table).fetchone()['n']
+  return con.execute('SELECT * FROM %s WHERE id=?' % table, (random.randint(1, l),)).fetchone()
 
 if section == 'religion':
   # return only the religion section
-  context['religion'] = con.execute('SELECT * FROM Religion WHERE id=?', (random.randint(1, num_religions),)).fetchone()
-  context['pantheon'] = con.execute('SELECT * FROM Pantheon WHERE id=?', (random.randint(1, num_pantheons),)).fetchone()
-  context['founder'] = con.execute('SELECT * FROM Founder WHERE id=?', (random.randint(1, num_founders),)).fetchone()
+  context['religion'] = get_random_row('Religion')
+  context['pantheon'] = get_random_row('Pantheon')
+  context['founder'] = get_random_row('Founder')
   # we don't want two of the same follower beliefs
-  followers = random.sample(xrange(1,num_followers+1), 2)
+  l = con.execute('SELECT COUNT(*) as n FROM Follower').fetchone()['n']
+  followers = random.sample(xrange(1, l+1), 2)
   context['follower1'] = con.execute('SELECT * FROM Follower WHERE id=?', (followers[0],)).fetchone()
   context['follower2'] = con.execute('SELECT * FROM Follower WHERE id=?', (followers[1],)).fetchone()
-  context['enhancer'] = con.execute('SELECT * FROM Enhancer WHERE id=?', (random.randint(1, num_enhancers),)).fetchone()
+  context['enhancer'] = get_random_row('Enhancer')
 
   template = env.get_template('religion.html')
   content = template.render(context)
@@ -65,18 +60,20 @@ else:
   # return the whole page
 
   # randomise all the things
-  context['civ'] = con.execute('SELECT * FROM Civ WHERE id=?', (random.randint(1, num_civs),)).fetchone()
-  context['victory'] = con.execute('SELECT * FROM Victory WHERE id=?', (random.randint(1, num_victories),)).fetchone()
-  context['religion'] = con.execute('SELECT * FROM Religion WHERE id=?', (random.randint(1, num_religions),)).fetchone()
-  context['pantheon'] = con.execute('SELECT * FROM Pantheon WHERE id=?', (random.randint(1, num_pantheons),)).fetchone()
-  context['founder'] = con.execute('SELECT * FROM Founder WHERE id=?', (random.randint(1, num_founders),)).fetchone()
+  context['civ'] = get_random_row('Civ')
+  context['victory'] = get_random_row('Victory')
+  # return only the religion section
+  context['religion'] = get_random_row('Religion')
+  context['pantheon'] = get_random_row('Pantheon')
+  context['founder'] = get_random_row('Founder')
   # we don't want two of the same follower beliefs
-  followers = random.sample(xrange(1,num_followers+1), 2)
+  l = con.execute('SELECT COUNT(*) as n FROM Follower').fetchone()['n']
+  followers = random.sample(xrange(1, l+1), 2)
   context['follower1'] = con.execute('SELECT * FROM Follower WHERE id=?', (followers[0],)).fetchone()
   context['follower2'] = con.execute('SELECT * FROM Follower WHERE id=?', (followers[1],)).fetchone()
-  context['enhancer'] = con.execute('SELECT * FROM Enhancer WHERE id=?', (random.randint(1, num_enhancers),)).fetchone()
-  context['policy_tree'] = con.execute('SELECT * FROM PolicyTree WHERE id=?', (random.randint(1, num_policies),)).fetchone()
-  context['ideology'] = con.execute('SELECT * FROM Ideology WHERE id=?', (random.randint(1, num_ideologies),)).fetchone()
+  context['enhancer'] = get_random_row('Enhancer')
+  context['policy_tree'] = get_random_row('PolicyTree')
+  context['ideology'] = get_random_row('Ideology')
 
   template = env.get_template('main.html')
   content = template.render(context)

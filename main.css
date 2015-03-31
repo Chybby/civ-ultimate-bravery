@@ -93,6 +93,11 @@ body {
   text-shadow: 0 0 5px #a1b8bf;
 }
 
+#civ-box img {
+  width: 100px;
+  height: 100px;
+}
+
 #religion-refresh-button {
   width: 26px;
   padding: 0;

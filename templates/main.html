@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <title>Civilization 5 Ultimate Bravery</title>
-  <link rel="stylesheet" href="../foundation/css/normalize.css" />
-  <link rel="stylesheet" href="../foundation/css/foundation.min.css" />
-  <script src="../foundation/js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="foundation/css/normalize.css" />
+  <link rel="stylesheet" href="foundation/css/foundation.min.css" />
+  <script src="foundation/js/vendor/modernizr.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
   <div class="row">
     <div class="small-12 small-centered columns" id="civ-logo">
-      <img id="civ-logo" src="Civilization_V_logo.png" onclick="location.reload()"/>
+      <img id="civ-logo" src="images/Civilization_V_logo.png" onclick="location.reload()"/>
     </div>
   </div>
   <div class="row">
     <div class="small-12 small-centered columns" id="civ-logo-base">
-      <img id="civ-logo-base" src="Civilization_V_logo_base.png"/>
+      <img id="civ-logo-base" src="images/Civilization_V_logo_base.png"/>
     </div>
   </div>
   <div class="row">
@@ -37,8 +37,8 @@
           </div>
           <div class="row inside-box" id="civ-box">
             <div class="small-4 columns">
-              {{ civ.civ_image }}
-              {{ civ.leader_image }}
+              <img src="images/{{ civ.name|lower }}_civ.png"/>
+              <img src="images/{{ civ.name|lower }}_leader.png"/>
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
@@ -58,7 +58,7 @@
           </div>
           <div class="row inside-box" id="victory-box">
             <div class="small-4 columns">
-              {{ civ.civ_image }}
+              <img src="images/{{ civ.name|lower }}_civ.png"/>
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
@@ -120,8 +120,8 @@
     </div>
   </div>
 
-  <script src="../foundation/js/vendor/jquery.js"></script>
-  <script src="../foundation/js/foundation.min.js"></script>
+  <script src="foundation/js/vendor/jquery.js"></script>
+  <script src="foundation/js/foundation.min.js"></script>
   <script>
     $(document).foundation();
     function refreshReligion() {
