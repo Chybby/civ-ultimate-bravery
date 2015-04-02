@@ -1,13 +1,15 @@
 #!/usr/bin/python
 
 import os
+import os.path
 import sys
 
 from data import *
 
 import sqlite3
 
-os.remove('civ.db')
+if os.path.isfile('civ.db'):
+  os.remove('civ.db')
 
 con = sqlite3.connect("civ.db")
 
@@ -27,6 +29,7 @@ con.execute('''CREATE TABLE Victory (
                id INT,
                name VARCHAR(20) NOT NULL,
                vic_desc VARCHAR(100) NOT NULL,
+               image VARCHAR(25) NOT NULL,
                PRIMARY KEY(id))''')
 
 con.execute('''CREATE TABLE Religion (
@@ -80,7 +83,7 @@ with con:
   # insert victory data
   i = 1
   for v in victories:
-    con.execute('INSERT INTO Victory VALUES (?,?,?);', (i, v['name'], v['desc']))
+    con.execute('INSERT INTO Victory VALUES (?,?,?,?);', (i, v['name'], v['desc'], v['image']))
     i += 1
 
   # insert religion data
