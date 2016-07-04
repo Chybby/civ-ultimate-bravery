@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+<html lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <title>Civilization 5 Ultimate Bravery</title>
-  <link rel="stylesheet" href="../foundation/css/normalize.css" />
-  <link rel="stylesheet" href="../foundation/css/foundation.min.css" />
-  <script src="../foundation/js/vendor/modernizr.js"></script>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="static/normalize.css" />
+  <link rel="stylesheet" href="static/foundation.min.css" />
+  <link rel="stylesheet" type="text/css" href="static/main.css">
 </head>
 
 <body>
   <div class="row">
     <div class="small-12 small-centered columns" id="civ-logo">
-      <img id="civ-logo" src="images/Civilization_V_logo.png" onclick="location.reload()"/>
+      <img id="civ-logo" src="static/images/Civilization_V_logo.png" onclick="location.reload()"/>
     </div>
   </div>
   <div class="row">
     <div class="small-12 small-centered columns" id="civ-logo-base">
-      <img id="civ-logo-base" src="images/Civilization_V_logo_base.png"/>
+      <img id="civ-logo-base" src="static/images/Civilization_V_logo_base.png"/>
     </div>
   </div>
   <div class="row">
@@ -37,8 +35,8 @@
           </div>
           <div class="row inside-box" id="civ-box">
             <div class="small-4 columns">
-              <img src="images/{{ civ.name|lower }}_civ.png"/>
-              <img src="images/{{ civ.name|lower }}_leader.png"/>
+              <img src="static/images/{{ civ.name|lower }}_civ.png"/>
+              <img src="static/images/{{ civ.name|lower }}_leader.png"/>
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
@@ -58,7 +56,7 @@
           </div>
           <div class="row inside-box" id="victory-box">
             <div class="small-4 columns">
-              <img src="images/{{ victory.image }}"/>
+              <img src="static/images/{{ victory.image }}"/>
             </div>
             <div class="small-8 columns">
               <div class="row inside-title">
@@ -119,11 +117,7 @@
     <div class="medium-10 small-12 small-centered columns" id="bottom-box">
     </div>
   </div>
-
-  <script src="../foundation/js/vendor/jquery.js"></script>
-  <script src="../foundation/js/foundation.min.js"></script>
   <script>
-    $(document).foundation();
     function refreshReligion() {
       xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
@@ -131,7 +125,7 @@
           document.getElementById("religion-box").outerHTML=xmlhttp.responseText;
         }
       }
-      xmlhttp.open("GET", "index.cgi?section=religion", true);
+      xmlhttp.open("GET", "/?section=religion", true);
       xmlhttp.send();
     }
   </script>
